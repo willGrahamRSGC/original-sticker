@@ -1,13 +1,13 @@
 // Will Graham
 // January 23, 2015
+size(600, 600);
+  
+background(#ADF2FF);
 
-// Create canvas
-// width height
-size(600, 300);
+size(600, 600);
 
-// backround
-background(255);
-
+noStroke();
+strokeWeight(3.1);
 //black body
 fill(0);
 ellipse(320, 130, 150, 200);
@@ -27,21 +27,22 @@ stroke(0);
 ellipse(350, 140, 65, 30);
 
 // body cut
-stroke(255);
-fill(255);
+stroke(#ADF2FF);
+fill(#ADF2FF);
 rect(220, 200, 160, 160);
 
 // right eye
 fill(0);
+noStroke();
 ellipse(320, 80, 32, 32);
 
 // right pupil
 fill(255);
-stroke(255);
 ellipse(315, 75, 12, 12);
 
 // left eye
 fill(0);
+noStroke();
 ellipse(260, 80, 32, 32);
 
 // left pupil
@@ -49,8 +50,13 @@ fill(255);
 ellipse(255, 75, 12, 12);
 
 // bottom
+beginShape();
 stroke(0);
-line(243, 200, 374, 200);
+curveVertex(405, 180);
+curveVertex(372, 197);
+curveVertex(244, 197);
+curveVertex(220, 180);
+endShape();
 
 // nose
 stroke(0);
@@ -59,4 +65,6 @@ triangle(300, 97, 220, 93 , 300, 81);
 
 // nose cut off
 stroke(255);
-line(300, 97, 300, 80);
+strokeWeight(3);
+line(300, 100, 300, 80);
+
